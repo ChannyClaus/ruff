@@ -2,7 +2,7 @@
 //! text.
 
 use std::borrow::Cow;
-use std::cmp;
+use std::cmp::{self, max};
 
 use ruff_source_file::UniversalNewlines;
 
