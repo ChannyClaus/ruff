@@ -152,7 +152,7 @@ pub fn dedent_to(text: &str, indent: &str) -> String {
         .unwrap_or_default();
 
     // Determine the amount of indentation to remove.
-    let dedent_len = existing_indent_len - indent.len();
+    let dedent_len = max(existing_indent_len, indent.len()) - indent.len();
 
     let mut result = String::with_capacity(text.len() + indent.len());
     for line in text.universal_newlines() {
