@@ -176,7 +176,7 @@ impl<'a> Generator<'a> {
         self.p_if(!std::mem::take(first), s);
     }
 
-    pub(crate) fn generate(self) -> String {
+    pub fn generate(self) -> String {
         self.buffer
     }
 
